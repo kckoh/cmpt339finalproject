@@ -1,6 +1,23 @@
 <?php
+require_once("includes/TrimString.php");
+require_once("includes/config.php");
+require_once("includes/Constants.php");
+require_once("includes/Account.php");
+
+    $account = new Account($conn);
+
     if(isset($_POST["submitAccount"])){
-        echo "Testing for submit";
+ 
+        $username = TrimString::trimLowerUsername($_POST["username"]);
+        $password1 = TrimString::trimLowerPassword($_POST["firstPassword"]);
+
+        $signUpSuccessful =  $account->login($username, $password1);
+
+        if( $signUpSuccessful){
+            $_SESSION["LoggedIn"] = $username;
+            header("Location: index.php");
+        }
+            
     }
 ?>
 
@@ -20,7 +37,7 @@
                 <h2>Login</h2>
             </div>
                 <form method="POST">
-                 
+                <?php echo $account->checkError(Constants::$accountDoNotExist); ?>
                     <input type="text" name="username" placeholder="username" required>  
                     <input type="password" name="firstPassword" placeholder="password" required>
 
