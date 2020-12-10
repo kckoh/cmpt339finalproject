@@ -1,0 +1,59 @@
+html,
+body {
+    height:100%;
+    padding:0;
+    margin:0;
+    
+}
+
+.container {
+    background-color: #efefee;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    display:flex;
+
+}
+
+.column {
+    background-color: #fff;
+    min-height: 300px;
+    max-height: 100%;
+    width: 450px;
+}
+
+.column form {
+    display: flex;
+    flex-direction: column;
+
+}
+
+/* some css are inspired from tutorialspoint */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px 14px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
+
+  .column form input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    font-size: medium;
+    margin: 8px 0;
+    width: 20%;
+    text-align: center;
+    opacity: 0.9;
+  }
+
+  .title {
+      padding: 14px 20px ;
+  }
+  
+
+  .logIn {
+    padding: 20px ;
+  }
