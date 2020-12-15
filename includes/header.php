@@ -6,7 +6,6 @@
     require_once("includes/News.php");
     require_once("includes/Category.php");
     require_once("includes/Constants.php");
-    //require_once("includes/Watch.php");
     require_once("includes/RandomMovieProvider.php");
     
 
