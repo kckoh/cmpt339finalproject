@@ -59,6 +59,9 @@
       <li class="nav-item">
         <a class="nav-link" href="search.php">SEARCH</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="logout.php"> <i class="fas fa-sign-out-alt"></i> </a>
+      </li>
     </ul>
   </div>
 </nav>
