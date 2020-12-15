@@ -42,7 +42,7 @@ require_once("includes/RandomMovieProvider.php");
             
 
             return "<div class='category'>
-                        <a href='getCategory.php?id=$categoryId'>
+                        <a href='#'>
                             <h3>$title</h3>
                         </a>
                         <div class='entities'>
@@ -82,7 +82,7 @@ require_once("includes/RandomMovieProvider.php");
  
              
              return "<div class='category'>
-                         <a href='getCategory.php?id=$categoryId'>
+                         <a href='#'>
                              <h3>$title</h3>
                          </a>
                          <div class='entities'>

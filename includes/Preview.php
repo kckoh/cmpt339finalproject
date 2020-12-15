@@ -68,7 +68,7 @@
         }
 
 
-
+        //get random movie
         public function getRandomEntity(){
             $query =  $this->conn->prepare("select * from movies ORDER BY RAND() LIMIT 1");
             $query->execute();
