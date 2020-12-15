@@ -8,5 +8,9 @@
         public static $passwordErrors = "Must be betweeb 2 and 30";
         public static $passwordNotMatched = "Password must be matched";
         public static $accountDoNotExist = "Account do not exist in the database";
+
+        public static function showError($input){
+            exit("<span class='errorMessage'> $input</span>");
+        }
     }
 ?>

@@ -1,12 +1,15 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>cmpt 339</title>
-    </head>
-    <body>
+<?php
 
-        <h1>My First Heading</h1>
-        <p>My first paragraph.</p>
+    require_once("includes/header.php");
 
-    </body>
-</html>
+    $preview = new Preview($conn, $LoggedIn);
+    echo $preview->createVideo(null);
+
+    $news = new Category($conn, $LoggedIn);
+    echo $news->showAllNews();
+
+    $categories = new Category($conn, $LoggedIn);
+    echo $categories->showAllCategories();
+?>
+
+
