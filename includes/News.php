@@ -1,5 +1,5 @@
 <?php
-    //stores an arrary of movies
+    //simple news model
     class News{
 
         private $conn, $input;
@@ -20,7 +20,7 @@
             }
         }
 
-        //getter for entity
+        //getter 
         public function getId(){
             return $this->input["id"];
         }

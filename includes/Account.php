@@ -1,6 +1,7 @@
 <?php
     class Account{
 
+        //account php that handles with login and insert the data into the database
         private $conn;
         private $errArray = array();
 
@@ -25,7 +26,7 @@
 
         public function login($username, $password1 ){
 
-            
+    
             $query = $this->conn->prepare("select * from Account where username=:username and password=:password");
           
             $query->bindValue(":username",$username);
@@ -43,19 +44,14 @@
                 array_push($this->errArray, Constants::$accountDoNotExist);
                 return false;
             }
-          
-            
 
         }
-
-
 
 
         public function insertAccountToDatabase($firstName, $lastName, $username, $password){
             $query = $this->conn->prepare("insert into Account (firstName, lastName, username, password) 
                                             values  (:firstName, :lastName, :username, :password) ");
-
-                                            
+                         
             $query->bindValue(":firstName",$firstName);
             $query->bindValue(":lastName",$lastName);                
             $query->bindValue(":username",$username);
@@ -68,6 +64,7 @@
             
         }
 
+        //testing and if it fails it notifies to the users
         public function testFirstName($firstName){
             
             if(strlen($firstName) <2 || strlen($firstName) > 40){

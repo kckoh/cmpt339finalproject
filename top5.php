@@ -1,5 +1,5 @@
 <?php
-
+    //shows all the top five movies order by asc
     require_once("includes/header.php");
 
     $preview = new Preview($conn, $LoggedIn);

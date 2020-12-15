@@ -1,6 +1,7 @@
 <?php
     class Constants{
 
+        //all constansts for errors
         public static $firstNameErrors = "Must be betweeb 2 and 40";
         public static $lastNameErrors = "Must be betweeb 2 and 20";
         public static $usernameErrors = "Must be betweeb 2 and 75";

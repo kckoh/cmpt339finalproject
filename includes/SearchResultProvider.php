@@ -1,5 +1,5 @@
 <?php
-    //stores an arrary of movies
+    //get results from searchEntities and return the html with style
     class SearchResultsProvider{
 
         private $conn, $username;

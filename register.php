@@ -4,9 +4,10 @@ require_once("includes/config.php");
 require_once("includes/Constants.php");
 require_once("includes/Account.php");
 
-
+    //register page which inherits from Account
     $account = new Account($conn);
     
+    //when submitted, following things are firstly sanitized 
     if(isset($_POST["submitAccount"])){
         $firstName = TrimString::trimLowerName($_POST["firstName"]);
         $lastName = TrimString::trimLowerName($_POST["lastName"]);
@@ -41,6 +42,7 @@ require_once("includes/Account.php");
                 <h2>Sign Up</h2>
             </div>
                 <form method="POST">
+                    <!-- each form is attached with php actions to show errors -->
                     <?php echo $account->checkError(Constants::$firstNameErrors); ?>
                     <input type="text" name="firstName" placeholder="First Name" required> 
                     <?php echo $account->checkError(Constants::$lastNameErrors); ?>

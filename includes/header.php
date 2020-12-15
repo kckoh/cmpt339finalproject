@@ -1,5 +1,5 @@
 <?php
-
+  //most of the php files derive from this header 
     require_once("includes/config.php");
     require_once("includes/Preview.php");
     require_once("includes/Movie.php");
