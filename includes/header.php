@@ -1,5 +1,5 @@
 <?php
-
+  //most of the php files derive from this header 
     require_once("includes/config.php");
     require_once("includes/Preview.php");
     require_once("includes/Movie.php");
@@ -58,6 +58,9 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="search.php">SEARCH</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="logout.php"> <i class="fas fa-sign-out-alt"></i> </a>
       </li>
     </ul>
   </div>

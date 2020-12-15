@@ -1,5 +1,7 @@
 <?php
 require_once("includes/RandomMovieProvider.php");
+
+//this class handles shwoing all categories, topmovies and news
     class Category{
 
         private $conn, $username;
@@ -38,9 +40,7 @@ require_once("includes/RandomMovieProvider.php");
                 $movieHtml .= $movieProvider->createMoviePreviewList($movie);
             }
 
-            //return $movieHtml . "<br>"; 
             
-
             return "<div class='category'>
                         <a href='#'>
                             <h3>$title</h3>

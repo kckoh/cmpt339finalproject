@@ -9,7 +9,7 @@
             $this->usernmae = $username;
         }
 
-
+        //it performs a query that searches 
         public static function getSearchEntities($conn,$term){
 
             $sql = "select * from movies where name like concat('%', :term, '%') limit 10";

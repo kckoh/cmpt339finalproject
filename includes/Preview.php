@@ -1,4 +1,5 @@
 <?php
+//this class handles with video
     class Preview{
 
         private $conn, $username;

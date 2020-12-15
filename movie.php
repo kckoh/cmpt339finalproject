@@ -1,6 +1,6 @@
 <?php
 //add the description rating here
-
+    
     require_once("includes/Constants.php");
     require_once("includes/header.php");
     if(!isset($_GET["id"])){

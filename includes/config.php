@@ -1,5 +1,6 @@
 <?php
-//output buffer
+//handles the database for connecting
+//it assumes basic root as a username
 ob_start();
 session_start();
 

@@ -1,4 +1,5 @@
 <?php
+//for securities use sosme sanitizers
     class TrimString{
         public static function trimLowerName($string){
             $string = strip_tags($string);

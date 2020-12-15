@@ -4,6 +4,8 @@ require_once("includes/config.php");
 require_once("includes/Constants.php");
 require_once("includes/Account.php");
 
+//simple login page that checks if the login information is under the databse
+//all the logic is under Account php.
     $account = new Account($conn);
 
     if(isset($_POST["submitAccount"])){
@@ -13,6 +15,7 @@ require_once("includes/Account.php");
 
         $signUpSuccessful =  $account->login($username, $password1);
 
+        //if it is logged in, go to index.php
         if( $signUpSuccessful){
             $_SESSION["LoggedIn"] = $username;
             header("Location: index.php");
